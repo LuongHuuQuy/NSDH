@@ -54,7 +54,7 @@ td {
 }
 
 .user-thead tr {
-    border-bottom: 2px solid #e7e8e9 !important;
+    border-bottom: 2px solid #e7e8e9;
 }
 
 
@@ -73,6 +73,16 @@ td {
 .th-username {
     width: 210px;
     min-width: 210px;
+}
+
+.add-user-thead th:not(:first-child, :last-child)::before {
+    position: absolute;
+    top: 30% !important;
+    left: 0 !important;
+    background-color: red;
+    width: 1px !important;
+    height: 20px !important;
+    z-index: 100000000 !important;
 }
 
 .td-username {
@@ -107,6 +117,10 @@ td {
     height: 100% !important;
     border-radius: 50%;
     background-color: #a6d130;
+}
+
+.simple-color-validate {
+    background-color: rgb(247, 6, 6);
 }
 
 .td-color-red {

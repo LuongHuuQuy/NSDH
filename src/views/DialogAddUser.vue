@@ -44,7 +44,7 @@
                   </div>
                 </td>
                 <td class="add-td-username">
-                  <div class="input-add-user">
+                  <div class="input-add-user" :class="{'simple-color-validate': d}">
                     <input
                       v-model="user.UserName"
                       type="text"
@@ -192,7 +192,10 @@ export default {
         { id: "197fda97-5a35-781d-0e77-d9ebc53aac3d", name: "Lập trình viên" },
         { id: "1e5e96fa-5d7a-599d-27c2-579daad24557", name: "QC" },
         { id: "28cd1599-63bf-785f-4f80-7ed9d1ea06ea", name: "Nhân viên" },
-        { id: "3304dddb-1b72-607f-25c2-579daad24557", name: "Giám đốc khối/ VP/TT",},
+        {
+          id: "3304dddb-1b72-607f-25c2-579daad24557",
+          name: "Giám đốc khối/ VP/TT",
+        },
         { id: "36ac2df8-2b1e-368f-cc1d-086412a8ea97", name: "Triển khai" },
         { id: "5fab4ff7-1b8e-64d0-1880-de64d090a2c2", name: "Kế toán" },
         { id: "6c80a684-1cb5-41af-ff34-60b3ebf808a9", name: "Tester" },
@@ -230,6 +233,7 @@ export default {
 
         this.listUserRoles.forEach((element) => {
           if (!element.UserName) {
+            alert();
             isValidate = false;
           }
           if (!element.DepartmentID) {
@@ -255,15 +259,18 @@ export default {
     btnAddUserList() {
       try {
         var me = this;
-        axios
-          .post(`http://localhost:5224/api/v1/Users`, me.listUserRoles)
-          .then(function () {
-            me.$emit("btnShowDialogAddParameter", false);
-            me.$emit("pagination");
-          })
-          .catch(function (err) {
-            console.log(err, "Có lỗi khi gọi api thêm mới !");
-          });
+        var isVal = this.userAddValidate();
+        if (isVal) {
+          axios
+            .post(`http://localhost:5224/api/v1/Users`, me.listUserRoles)
+            .then(function () {
+              me.$emit("btnShowDialogAddParameter", false);
+              me.$emit("pagination");
+            })
+            .catch(function (err) {
+              console.log(err, "Có lỗi khi gọi api thêm mới !");
+            });
+        }
       } catch (error) {
         console.log(error, "Có lỗi xảy ra khi thêm mới danh sách user !");
       }
