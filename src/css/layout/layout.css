@@ -1,0 +1,66 @@
+.ms-layout {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.ms-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+}
+
+.ms-container {
+    display: flex;
+}
+
+.ms-navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.ms-content-full {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CSS scrollBar */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #d2d8df;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #888888;
+}
+
+ ::-webkit-scrollbar:hover {
+    width: 14px !important;
+    height: 14px !important;
+}

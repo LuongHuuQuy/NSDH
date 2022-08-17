@@ -1,0 +1,192 @@
+.ms-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: auto;
+    height: 36px !important;
+    border-radius: 4px;
+    padding: 0px 16px 0px 12px;
+    min-width: 80px !important;
+    background-color: #02a3ec;
+    color: #fff;
+    border: 1px solid #02a3ec;
+    /* outline: 1px solid #02a3ec; */
+}
+
+.ms-button:hover {
+    background-color: #0583be;
+}
+
+
+/* Nội dung button chạy quy trình */
+
+.ms-icon-default {
+    order: 0;
+    margin-right: 4px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+}
+
+.icon-run-process {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/img/Icon_process.1401a69c.svg') no-repeat -280px -206px;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.icon-btn-add {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/img/Icon_process.1401a69c.svg') no-repeat -170px -3px;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.ms-button-text {
+    white-space: nowrap;
+    font-weight: 500;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Nội dung Button cập nhật trong form chi tiết  */
+
+.btn-update-detail {
+    padding: 0px 16px;
+    background-color: #fff;
+    color: #ff6333;
+    border: 1px solid #f90;
+    margin-right: 12px;
+}
+
+.btn-update-detail:hover {
+    background-color: #fff;
+    color: #f90;
+    border: 1px solid #f90;
+}
+
+
+/* Nội dung Button xóa trong form chi tiết  */
+
+.btn-delete-detail {
+    padding: 0px 16px;
+    background-color: #fff;
+    color: #ff6333;
+    border: 1px solid #f90;
+}
+
+.btn-delete-detail:hover {
+    background-color: #fff;
+    color: #f90;
+    border: 1px solid #f90;
+}
+
+
+/* Nội dung Button thoát trong dialog thêm mới  */
+
+.btn-user-exit {
+    padding: 0px 16px !important;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    color: #1e1e1e;
+    font-weight: 400;
+    margin-right: 12px!important;
+    font-family: unset;
+}
+
+.btn-user-exit:hover {
+    background-color: #dbf4ff;
+    color: #02a3ec;
+    border: 1px solid #eaebef;
+}
+
+
+/* Nội dung Button Lưu trong dialog thêm mới  */
+
+.btn-user-add {
+    padding: 0px 16px !important;
+    margin-right: 12px;
+}
+
+.custom-btn-add {
+    margin-right: 0px !important;
+}
+
+
+/* Nội dung Button xác nhận xóa User  */
+
+.btn-acept-delete {
+    padding: 0px 16px !important;
+    background-color: #e61d1d;
+    border: none !important;
+}
+
+.btn-acept-delete:hover {
+    background-color: #d81010;
+    color: #fff;
+    border: 1px solid #d81010;
+}
+
+
+/* Button thêm dòng trong dialog thêm mới user */
+
+.button-add-row {
+    margin-left: 1px;
+    background-color: #ffffff !important;
+    color: #02a3ec !important;
+    border: none !important;
+}
+
+.icon-add-row {
+    width: 20px;
+    height: 20px;
+    -webkit-mask-image: url(../../assets/img/Icon_process.1401a69c.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: -170px -3px;
+    background-color: #02a3ec !important;
+}
+
+.add-row-text {
+    font-weight: bold;
+}
+
+.base-btn-pagesize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    width: 80px;
+    border-radius: 4px;
+    padding: 0px 8px 0px 12px;
+    outline: none;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.base-btn-pagesize span {
+    white-space: nowrap;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.icon-pagesize {
+    font-size: 20px;
+    margin-left: 4px;
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/img/Icon.de5bb0db.svg) -144px -24px no-repeat;
+}

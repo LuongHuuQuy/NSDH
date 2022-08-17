@@ -1,0 +1,374 @@
+.grid-container {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-indent: 0;
+    border: none;
+}
+
+.grid-content {
+    height: calc(100vh - 267px);
+    color: #333;
+    font-weight: 400;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.table-user {
+    position: relative;
+    overflow: auto;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.table-user-detail {
+    border-collapse: collapse;
+}
+
+.table-user-detail tr {
+    height: 48px;
+    border-bottom: 1px solid #e7e8e9;
+}
+
+.table-user-detail th,
+td {
+    height: 48px;
+    text-align: left;
+    padding: 0 16px;
+    /* background-color: #fff !important; */
+}
+
+.user-thead {
+    z-index: 5;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+
+.user-thead th {
+    border-right: 0.1px solid #e7e8e9 50%;
+}
+
+.user-thead tr {
+    border-bottom: 2px solid #e7e8e9 !important;
+}
+
+
+/* CSS cho từng cột */
+
+.th-usercode {
+    width: 170px;
+    min-width: 170px;
+}
+
+.td-usercode {
+    width: 170px;
+    min-width: 170px;
+}
+
+.th-username {
+    width: 210px;
+    min-width: 210px;
+}
+
+.td-username {
+    width: 210px;
+    min-width: 210px;
+}
+
+.th-department {
+    width: 250px;
+    min-width: 250px;
+}
+
+.td-username-flex {
+    display: flex;
+    align-items: center !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.td-username-avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    margin-right: 8px!important;
+    display: block;
+}
+
+.td-username-avatar div {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+    background-color: #a6d130;
+}
+
+.td-color-red {
+    background-color: #e83950 !important;
+}
+
+.td-color-green {
+    background-color: #39c5ab !important;
+}
+
+.td-color-pink {
+    background-color: #fa92ad !important;
+}
+
+.td-color-violet {
+    background-color: #a665e4 !important;
+}
+
+.td-color-orange {
+    background-color: #fb9700 !important;
+}
+
+.td-color-blue {
+    background-color: #4286df !important;
+}
+
+.td-color-dkorange {
+    background-color: #a1ff54 !important;
+}
+
+.td-color-gray {
+    background-color: #9aa3a8 !important;
+}
+
+.td-background-color {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.td-flex-text {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #fff;
+    font-size: 19px;
+}
+
+.td-department {
+    width: 250px;
+    min-width: 250px;
+}
+
+.th-position {
+    width: 220px;
+    min-width: 220px;
+}
+
+.td-position {
+    width: 220px;
+    min-width: 220px;
+}
+
+.th-email {
+    width: 170px;
+    min-width: 170px;
+}
+
+.td-email {
+    width: 170px;
+    min-width: 170px;
+}
+
+.th-role {
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.td-role {
+    min-width: 200px;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.th-status {
+    width: 200px;
+    min-width: 200px;
+}
+
+.td-status {
+    width: 200px;
+    min-width: 200px;
+}
+
+.td-status-container {
+    position: relative;
+    padding-left: 16px !important;
+}
+
+.status-color-active {
+    color: rgb(102, 209, 129) !important;
+}
+
+.status-color-active span {
+    background-color: rgb(102, 209, 129) !important;
+}
+
+.status-color-wait {
+    color: rgb(243, 150, 25) !important;
+}
+
+.status-color-wait span {
+    background-color: rgb(243, 150, 25) !important;
+}
+
+.status-color-not {
+    color: rgb(19, 178, 216) !important;
+}
+
+.status-color-not span {
+    background-color: rgb(19, 178, 216) !important;
+}
+
+.status-color-cease {
+    color: rgb(97, 103, 103) !important;
+}
+
+.status-color-cease span {
+    background-color: rgb(97, 103, 103) !important;
+}
+
+.td-status-container span {
+    position: absolute !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    left: 0 !important;
+    top: 5px !important;
+    text-align: left;
+}
+
+.td-btn {
+    position: sticky;
+    right: 0px;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 80px;
+    /* width: 80px !important; */
+}
+
+.tbl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    min-height: 48px;
+}
+
+.tbl-btn-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer;
+}
+
+.block-update {
+    display: none;
+}
+
+tr:hover .block-update {
+    display: block;
+}
+
+.tbl-btn-update i {
+    width: 24px!important;
+    height: 24px!important;
+    background: url(../../assets/img/Icon.de5bb0db.svg) -216px 0 no-repeat!important;
+}
+
+.tbl-btn-update:hover {
+    border-radius: 50%;
+    background-color: #dadce3;
+}
+
+.tbl-btn-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer;
+}
+
+.block-delete {
+    display: none;
+}
+
+tr:hover .block-delete {
+    display: block;
+}
+
+tr:hover td {
+    background-color: #dbf8ff !important;
+}
+
+tr:hover .input-add-user {
+    background-color: #fff !important;
+}
+
+.tbl-btn-delete i {
+    width: 24px;
+    height: 24px;
+    -webkit-mask-image: url(../../assets/img/Icon_process.1401a69c.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: -264px 0;
+    background-color: #de1e1e!important;
+}
+
+.tbl-btn-delete:hover {
+    border-radius: 50%;
+    background-color: #dadce3;
+}
+
+
+/* CSS loadding */
+
+.ic-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(19 18 18 / 2%);
+    z-index: 15;
+}
+
+.spinner {
+    font-size: 15px;
+    width: 3.9em;
+    height: 3.9em;
+    border-top: 0.3em solid #019161f2;
+    border-right: 0.3em solid transparent;
+    border-radius: 50%;
+    margin: auto;
+    animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg)
+    }
+    from {
+        border-top: 0.3em solid rgb(90, 26, 240);
+    }
+    to {
+        border-top: 0.3em solid #eb0bcaf2;
+    }
+}

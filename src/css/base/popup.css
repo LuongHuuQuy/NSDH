@@ -1,0 +1,201 @@
+.ms-popup-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.popup-delete-container {
+    background: rgb(255, 255, 255);
+    width: 415px;
+    min-width: 500px;
+    position: relative;
+    /* z-index: 100; */
+    max-width: calc(100% - 30px);
+    max-height: calc(100% - 4px);
+    border-radius: 6px;
+    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    overflow: visible;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.popup-delete-header {
+    height: 53px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px 8px;
+    position: relative;
+    padding: 24px;
+    padding-bottom: 0;
+    padding-top: 18px !important;
+    min-height: 53px !important;
+}
+
+.delete-header-title {
+    width: 100%;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    min-height: 29px!important;
+}
+
+.delete-header-title h2 {
+    font-size: 20px;
+    letter-spacing: .384px!important;
+    font-weight: 500;
+    color: #171b2a;
+}
+
+.delete-header-title span {
+    letter-spacing: 0.576px;
+    font-size: 24px;
+    color: rgb(33, 33, 33);
+    font-weight: 500;
+}
+
+.popup-delete-content {
+    overflow: auto;
+    height: calc(100% - 60px);
+    padding: 24px;
+    color: #1f1f20;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.ms-popup-footer {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    background: #f2f2f2;
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+}
+
+
+/* CSS popup Sửa vai trò người dùng */
+
+.popup-delete-container {
+    background: rgb(255, 255, 255);
+    width: 600px !important;
+    min-width: 500px;
+    height: auto !important;
+}
+
+.popup-update-content {
+    overflow: auto;
+    height: calc(100% - 60px);
+    padding: 24px;
+}
+
+.item-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-update-user {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    margin-right: 8px !important;
+    display: block;
+}
+
+.avatar-update-user div {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #a6d130;
+    border-radius: 50%;
+}
+
+.title-email {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.update-user-lable {
+    font-weight: 700;
+    font-size: 20px!important;
+    text-align: left;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 4px;
+    outline: none;
+}
+
+.update-user-lable p {
+    margin: 0px !important;
+    color: rgb(27, 28, 30) !important;
+}
+
+.update-user-lable span {
+    float: inherit;
+    color: #e54848;
+    padding-left: 2px;
+}
+
+.update-role-content {
+    display: flex;
+    width: 100%;
+    line-height: 35px;
+    text-indent: 0px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    clear: both;
+    flex-flow: wrap;
+}
+
+.role-content-col {
+    margin-left: 0%;
+    width: 50%;
+    float: left;
+}
+
+.role-col-item {
+    display: flex;
+    align-items: center;
+}
+
+.role-col-item label {
+    position: relative;
+    padding: 1px 0 0 32px;
+    cursor: pointer;
+    user-select: none;
+    height: 100%;
+    color: #212121;
+    text-align: left!important;
+    display: flex!important;
+    align-items: center!important;
+    margin-bottom: 4px;
+    font-weight: 500;
+    outline: none;
+}
+
+.col-item-content {
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    font-weight: 400;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.col-item-content div {
+    margin-top: -5px;
+    font-weight: 400;
+}

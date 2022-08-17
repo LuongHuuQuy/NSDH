@@ -1,0 +1,5 @@
+.ms-container {
+    width: 100vw;
+    min-width: 100vw;
+    flex-grow: 2;
+}

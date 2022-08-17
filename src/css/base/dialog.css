@@ -1,0 +1,270 @@
+.dialog-add-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.popup-add-user {
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    width: 992px;
+    min-width: 500px;
+    position: relative;
+    max-width: calc(100% - 30px);
+    max-height: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 6px;
+    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    animation: rebound .3s;
+    overflow: visible;
+}
+
+.add-user-header {
+    height: 53px;
+    min-height: 53px!important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px 8px;
+    position: relative;
+    padding: 18px 24px 0px 24px;
+}
+
+.ms-popup-title {
+    width: 100%;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    min-height: 29px!important;
+}
+
+.ms-popup-title h2 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: .384px!important;
+    color: #171b2a;
+}
+
+.ms-popup-title span {
+    letter-spacing: 0.576px;
+    font-size: 24px;
+    color: rgb(33, 33, 33);
+    font-weight: bold;
+}
+
+.ms-popup-close {
+    position: relative;
+    right: -8px;
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between!important;
+}
+
+.add-user-close {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    width: 36px!important;
+    height: 36px!important;
+    border-radius: 50%!important;
+    border: none!important;
+    outline: none!important;
+}
+
+.add-user-close:hover {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
+    background-color: #eff1f6!important;
+}
+
+.add-user-close i {
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/img/Icon.de5bb0db.svg') no-repeat -216px -24px;
+}
+
+.add-user-content {
+    height: calc(100% - 60px);
+    padding: 24px;
+}
+
+.add-user-footer {
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    background: #f2f2f2;
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+}
+
+.user-footer-btn {
+    display: flex;
+    margin-right: -12px;
+}
+
+.add-user-table {
+    overflow: auto;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+/* Nội dung phần bảng thêm User */
+
+.table-add-all {
+    overflow: auto;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid #e7e8e9;
+    border-collapse: collapse;
+}
+
+.add-user-thead tr {
+    border-bottom: 1px solid #e7e8e9;
+}
+
+.table-add-all tr {
+    height: 48px;
+}
+
+.table-add-all thead span {
+    color: rgb(239, 11, 11);
+}
+
+.add-user-thead th {
+    height: 48px;
+    text-align: left;
+    padding: 0 16px;
+    background: #d7f3fa !important;
+    border-left: 0.1px solid #e7e8e9;
+}
+
+.add-user-tbody td {
+    height: 48px;
+    padding: 0 6px;
+    /* background-color: #fff; */
+}
+
+
+/* CSS cho từng cột từng dòng */
+
+.th-btn-add {
+    padding: 0 !important;
+    border-left: none !important;
+}
+
+.td-btn-add {
+    width: 50px !important;
+}
+
+.tbl-btn-add {
+    width: auto !important;
+    min-width: 0px !important;
+}
+
+.add-th-stt {
+    width: 45px;
+    min-width: 45px;
+}
+
+.add-td-stt {
+    text-align: center;
+    width: 45px;
+    min-width: 45px;
+}
+
+.add-th-usercode {
+    width: 140px;
+    min-width: 140px;
+}
+
+.add-td-usercode {
+    width: 140px;
+    min-width: 140px;
+}
+
+.custom-usercode-div {
+    width: 130px !important;
+}
+
+.add-th-username {
+    width: 200px;
+    min-width: 200px;
+}
+
+.add-td-username {
+    width: 200px;
+    min-width: 200px;
+}
+
+.add-th-department {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-td-department {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-th-position {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-td-position {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-th-email {
+    width: 250px;
+    min-width: 250px;
+}
+
+.add-td-email {
+    width: 250px;
+    min-width: 250px;
+}
+
+.add-th-role {
+    width: 350px;
+    min-width: 350px;
+}
+
+.add-td-role {
+    width: 350px;
+    min-width: 350px;
+}
+
+.add-th-status {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-td-status {
+    width: 240px;
+    min-width: 240px;
+}
+
+.add-row-button {
+    margin-top: 5px;
+}

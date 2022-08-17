@@ -1,0 +1,188 @@
+.ms-header {
+    width: 100vw;
+    min-width: 100vh;
+    flex-basis: 56px;
+    background-color: #fff;
+    padding: 0px 16px 0px 0px;
+    border-bottom: 1px solid #e7e8e9;
+}
+
+.ms-header-left {
+    display: flex;
+    min-width: 998px;
+    width: 998px;
+    min-height: 55px;
+    height: 55px;
+}
+
+.ms-header-right {
+    display: flex;
+    align-items: center;
+    min-width: 352px;
+    width: 352px;
+    min-height: 55px;
+    height: 55px;
+}
+
+
+/* Nội dung phần headerr left  */
+
+.header-app-menu {
+    width: 36px;
+    height: 36px;
+    margin: auto 16px;
+    background-image: url('../../assets/img/icon-app-gray.eec2ff5c.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.ms-header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 34px;
+    font-size: 16px;
+    color: #000;
+    padding: 0 10px 0 44px;
+    position: relative;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: Boldd;
+    outline: none;
+}
+
+.ms-header-logo::before {
+    content: "";
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    top: 12px;
+    left: 0;
+    text-decoration: none;
+    position: absolute;
+    background: transparent url('../../assets/img/logo.fe78f7ca.svg') no-repeat 0 0;
+}
+
+.header-top-menu {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.top-menu-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-menu-right {
+    justify-content: flex-end;
+}
+
+.menu-left-align {
+    height: 100%;
+    margin-right: 36px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.menu-left-align:hover .hover-color {
+    background-color: #02a3ec !important;
+}
+
+.menu-left-align:hover .menu-left-name {
+    color: #02a3ec !important;
+}
+
+.hover-color {
+    background-color: #fff !important;
+}
+
+.menu-left-name {
+    margin-top: 20px;
+    font-weight: 500;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.left-name-active {
+    color: #02a3ec;
+}
+
+.menu-left-active {
+    background-color: #02a3ec;
+    height: 3px;
+    width: 100%;
+}
+
+.btn-run-process {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Nội dung phần headerr right  */
+
+.header-right-title {
+    position: relative;
+    margin: 2px 24px 0px 0px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-image: url('../../assets//img/icon-notification-dark-thick.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-popup-title {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ce0000;
+    top: -4px;
+    right: -4px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.user-right-action {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 48px;
+    position: relative;
+}
+
+.user-avatar {
+    position: relative;
+    margin: auto;
+}
+
+.apui-user-avatar {
+    min-width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.apui-user-avatar img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: block;
+}

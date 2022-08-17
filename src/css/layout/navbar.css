@@ -1,0 +1,71 @@
+.ms-navbar {
+    min-width: 200px;
+    width: 200px;
+    min-height: 100%;
+    height: 100%;
+    padding-top: 16px;
+    background: #fff;
+}
+
+.ms-navbar a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.ms-menu-list {
+    display: flex;
+    align-items: center !important;
+    background-color: #ffffff;
+    height: 44px;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.active-menu-list {
+    background-color: #f3fbfd;
+}
+
+.active-menu-list>.icon-tab-flex {
+    background-color: #02a3ec!important;
+}
+
+.router-link-exact-active {
+    text-decoration: none;
+    color: #02a3ec!important;
+}
+
+.icon-tab {
+    margin-right: 8px;
+}
+
+.name-tab {
+    /* color: #02a3ec!important; */
+    line-height: 44px;
+}
+
+.icon-tab-flex {
+    width: 24px;
+    height: 24px;
+    -webkit-mask-image: url(../../assets/img/Icon_process.1401a69c.svg);
+    -webkit-mask-repeat: no-repeat;
+}
+
+.icon-employee {
+    -webkit-mask-position: -336px -48px;
+    background-color: #686c7b !important;
+}
+
+.icon-role {
+    -webkit-mask-position: -48px -72px;
+    background-color: #686c7b !important;
+}
+
+.icon-multiple-user {
+    -webkit-mask-position: -72px -24px;
+    background-color: #686c7b !important;
+}
+
+.icon-share-link {
+    -webkit-mask-position: -96px -72px;
+    background-color: #686c7b !important;
+}

@@ -1,0 +1,77 @@
+.global-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 4px 8px;
+    border: 1px solid #e7e8e9;
+    margin-right: 8px;
+    border-radius: 4px;
+    width: 240px;
+    height: 36px;
+    outline: none;
+}
+
+.global-search:focus-within {
+    border: 1px solid #02a3ec !important;
+    outline: none;
+}
+
+.icon-search {
+    background: url('../../assets/img/Icon_process.1401a69c.svg') no-repeat -291px -4px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    opacity: 0.3;
+}
+
+.input-search {
+    border: none;
+    outline: none;
+    margin: 0px 24px 0px 22px;
+    padding: 1px 2px;
+}
+
+.input-search:placeholder-shown {
+    opacity: 0.7;
+}
+
+
+/* CSS input Dialog thêm mới user */
+
+.input-add-user {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid #e7e8e9;
+    border-radius: 4px;
+    /* width: 180px; */
+    width: auto;
+    height: 36px;
+}
+
+.ms-tag-box {
+    width: 340px !important;
+    padding: 0px !important;
+    border: none !important;
+}
+
+.ms-select-add {
+    justify-content: center;
+    width: 240px !important;
+    padding: 0px !important;
+    border: none !important;
+}
+
+.input-content {
+    width: 160px;
+    border: none;
+    outline: none;
+    padding: 1px 2px;
+}
+
+.custom-usercode-input {
+    width: 110px !important;
+}

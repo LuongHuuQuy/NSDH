@@ -1,0 +1,44 @@
+@import url('./layout/layout.css');
+@import url('./layout/header.css');
+@import url('./layout/container.css');
+@import url('./layout/navbar.css');
+@import url('./layout/content.css');
+@import url('./layout/footer.css');
+@import url('./base/button.css');
+@import url('./base/input.css');
+@import url('./base/table.css');
+@import url('./base/detail.css');
+@import url('./base/selection.css');
+@import url('./base/dialog.css');
+@import url('./base/popup.css');
+@import url('./base/checkbox.css');
+* {
+    font-family: Regular;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Regular;
+    src: url('../assets//fonts/notosans-regular.2cb88a13.woff2');
+}
+
+@font-face {
+    font-family: Boldd;
+    src: url('../assets/fonts/notosans-bold.3ede5aff.woff2');
+}
+
+
+/* Chia index: 
+z-index: 5   - Tiêu đề trong bảng dữ liệu
+z-index: 10  - Dialog thêm mới user
+z-index: 18  - Trang chi tiết User
+z-index: 15  - Loadding 
+z-index: 20  - Popup xác nhận xóa User
+z-index: 20  - Popup xác nhận sửa Role User
+*/
