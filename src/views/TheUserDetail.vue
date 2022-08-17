@@ -236,7 +236,7 @@
 <script>
 import axios from "axios";
 import MsDetail from "../components/base/MsDetail.vue";
-import DialogAddUser from "../components/base/DialogAddUser.vue";
+import DialogAddUser from "../views/DialogAddUser.vue";
 import MsPopupDelete from "../components/base/MsPopupDelete.vue";
 import MsPopupUpdate from "../components/base/MsPopupUpdate.vue";
 import DropDown from "../components/base/DropDown.vue";
