@@ -42,7 +42,7 @@
 
 .user-detail-header .user-avatar-detail {
     margin-left: 0%;
-    width: 17%;
+    width: 15%;
     float: left;
 }
 
@@ -50,9 +50,12 @@
     margin-right: 8px!important;
 }
 
-.avatar img {
+.avatar div {
+    width: 66px !important;
+    height: 66px !important;
     border-radius: 50%;
     margin-top: 10px;
+    background-color: #a6d130;
     border: 1px solid var(--border-color);
 }
 

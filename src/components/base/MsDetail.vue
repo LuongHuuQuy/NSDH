@@ -8,7 +8,19 @@
                 <div class="user-detail-header">
                     <div class="user-avatar-detail">
                         <div class="avatar">
-                            <img src="../../assets/img/Imageavt.png" alt="avatar">
+                            <!-- <img src="../../assets/img/Imageavt.png" alt="avatar"> -->
+                            <div class="td-background-color" :class="{
+                                'td-color-red': userSelected.UserCode.substr(-1,1) == '2',
+                                'td-color-green': userSelected.UserCode.substr(-1,1) == '3',
+                                'td-color-pink': userSelected.UserCode.substr(-1,1) == '4',
+                                'td-color-violet': userSelected.UserCode.substr(-1,1) == '5',
+                                'td-color-orange': userSelected.UserCode.substr(-1,1) == '6',
+                                'td-color-blue': userSelected.UserCode.substr(-1,1) == '7',
+                                'td-color-dkorange': userSelected.UserCode.substr(-1,1) == '8',
+                                'td-color-gray': userSelected.UserCode.substr(-1,1) == '9'
+                            }">
+                                <b class="td-flex-text avatar-text-detail">{{userSelected.UserName.substr(0,1).toUpperCase()}}{{formatTextAvatar(userSelected.UserName)}}</b>
+                            </div>
                         </div>
                     </div>
                     <div class="user-main">
@@ -188,6 +200,21 @@ export default {
             }
             if(id==4){
                 return "Ngừng kích hoạt";
+            }
+        },
+
+        /**
+         * Chức năng: Cắt chuỗi thành avatar
+         * CreatedBy: Lương Hữu Quý
+         * CreatedDate: 11/08/2022
+         */
+        formatTextAvatar(text){
+            try {
+                var x = text.split(" ");
+                var data = x[x.length-1].trim().substr(0,1);
+                return data;
+            } catch (error) {
+                console.log(error, "Có lỗi khi cắt chuổi ghéo vào avatar !")
             }
         },
     },
