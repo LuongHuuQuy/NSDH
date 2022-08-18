@@ -90,6 +90,10 @@ td {
     z-index: 1000;
 }
 
+.table-user-detail .user-thead tr>th:hover {
+    cursor: col-resize;
+}
+
 .table-user-detail .user-thead .th-username:not(:first-child, :last-child)::before {
     right: 208px !important;
 }
@@ -150,6 +154,7 @@ td {
 
 .simple-color-validate {
     border: 1px solid #f44336;
+    border-radius: 4px;
 }
 
 .td-color-red {

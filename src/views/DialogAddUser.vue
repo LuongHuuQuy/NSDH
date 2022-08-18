@@ -34,7 +34,7 @@
               <tr v-for="(user, index) in listUserRoles" :key="index">
                 <td class="add-td-stt">{{ index + 1 }}</td>
                 <td class="add-td-usercode">
-                  <div class="input-add-user custom-usercode-div">
+                  <div class="input-add-user custom-usercode-div" :class="{'simple-color-validate': checkNullItemObject(user.UserCode)}">
                     <input
                       v-model="user.UserCode"
                       type="text"
@@ -61,7 +61,7 @@
                       display-expr="name"
                       v-model="user.DepartmentID"
                       placeholder="Chọn phòng ban"
-                      class="ms-select-box width-sel-add"
+                      class="ms-select-box width-sel-add" :class="{'simple-color-validate': checkNullItemObject(user.DepartmentID)}"
                     />
                   </div>
                 </td>
@@ -78,7 +78,7 @@
                   </div>
                 </td>
                 <td class="add-td-email">
-                  <div class="input-add-user">
+                  <div class="input-add-user" :class="{'simple-color-validate': checkNullItemObject(user.Email)}">
                     <input
                       v-model="user.Email"
                       type="text"
@@ -217,14 +217,12 @@ export default {
         { id: "34bd2cef-5026-567c-3b71-153b37881afe", name: "Quản lý" },
       ],
       listUserRoles: [],    // Danh sách các đối tượng cần thêm
-      listCheckColorValidate: [ 
-        {conditionNameColor: false}
-      ],
+      isCheckChangeColor: 1,
     };
   },
   methods: {
     checkNullItemObject(itemParam){
-      if(!itemParam){
+      if(!itemParam && this.isCheckChangeColor==2){
         return true;
       } else
       return false;
@@ -265,6 +263,7 @@ export default {
     btnAddUserList() {
       try {
         var me = this;
+        this.isCheckChangeColor = 2;
         var isVal = this.userAddValidate();
         if (isVal) {
           axios
@@ -290,6 +289,7 @@ export default {
     btnAddRow() {
       try {
         var me = this;
+        this.isCheckChangeColor = 1;
         const lastItemUser = me.listUserRoles[me.listUserRoles.length - 1];
         const splitUserCode = lastItemUser.UserCode.split("-");
         // [phan chu]
