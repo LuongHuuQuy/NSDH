@@ -19,9 +19,9 @@
                 <!-- Nội dung phần Header -->
                 <div class="content-main-header">
                     <div class="input-search-user">
-                        <div class="global-search">
-                            <div class="icon-search"></div>
-                            <input ref="isFocusSearch" v-model="searchData" @keyup="kprSearch" placeholder="Tìm kiếm người dùng" type="text" class="input-search">
+                        <div class="global-search margin-input-search">
+                            <div class="icon-search fix-margin-icon"></div>
+                            <input ref="isFocusSearch" v-model="searchData" @keyup="kprSearch" placeholder="Tìm kiếm người dùng" type="text" class="input-search custom-margin-search">
                         </div>
                     </div>
                     <div class="select-box-role">

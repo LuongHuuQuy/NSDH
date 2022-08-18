@@ -11,6 +11,10 @@
     outline: none;
 }
 
+.margin-input-search {
+    margin-right: 0px !important;
+}
+
 .global-search:focus-within {
     border: 1px solid #02a3ec !important;
     outline: none;
@@ -26,11 +30,19 @@
     opacity: 0.3;
 }
 
+.fix-margin-icon {
+    margin-left: 4px;
+}
+
 .input-search {
     border: none;
     outline: none;
     margin: 0px 24px 0px 22px;
     padding: 1px 2px;
+}
+
+.custom-margin-search {
+    margin-left: 34px;
 }
 
 .input-search:placeholder-shown {

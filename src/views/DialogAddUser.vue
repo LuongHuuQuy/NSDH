@@ -44,7 +44,7 @@
                   </div>
                 </td>
                 <td class="add-td-username">
-                  <div class="input-add-user" :class="{'simple-color-validate': d}">
+                  <div class="input-add-user" :class="{'simple-color-validate': checkNullItemObject(user.UserName)}">
                     <input
                       v-model="user.UserName"
                       type="text"
@@ -160,8 +160,7 @@ export default {
   data() {
     return {
       currentLineNumber: 1, // Thêm dòng mới
-      addDepartment: [
-        // Xử lý chọn Department
+      addDepartment: [      // Xử lý chọn Department
         {
           id: "11452b0c-768e-5ff7-0d63-eeb1d8ed8cef",
           name: "Phòng Công nghệ thông tin",
@@ -187,8 +186,7 @@ export default {
           name: "Dự án AMIS Quy trình",
         },
       ],
-      addPosition: [
-        // Xử lý Position
+      addPosition: [        // Xử lý Position
         { id: "197fda97-5a35-781d-0e77-d9ebc53aac3d", name: "Lập trình viên" },
         { id: "1e5e96fa-5d7a-599d-27c2-579daad24557", name: "QC" },
         { id: "28cd1599-63bf-785f-4f80-7ed9d1ea06ea", name: "Nhân viên" },
@@ -200,15 +198,13 @@ export default {
         { id: "5fab4ff7-1b8e-64d0-1880-de64d090a2c2", name: "Kế toán" },
         { id: "6c80a684-1cb5-41af-ff34-60b3ebf808a9", name: "Tester" },
       ],
-      addStatus: [
-        // Xử lý chọn Trạng thái
+      addStatus: [          // Xử lý chọn Trạng thái
         { id: 1, name: "Đang hoạt động" },
         { id: 2, name: "Chờ xác nhận" },
         { id: 3, name: "Chưa kích hoạt" },
         { id: 4, name: "Ngừng kích hoạt" },
       ],
-      addUserRole: [
-        // Xử lý chọn nhiều vai trò
+      addUserRole: [        // Xử lý chọn nhiều vai trò
         { id: "674934cc-42cf-20cf-1d4a-aea48a10ed18", name: "Nhân viên" },
         {
           id: "43a6bdf5-1b6b-451b-3695-2c566fa88632",
@@ -220,10 +216,20 @@ export default {
         },
         { id: "34bd2cef-5026-567c-3b71-153b37881afe", name: "Quản lý" },
       ],
-      listUserRoles: [], // Danh sách các đối tượng cần thêm
+      listUserRoles: [],    // Danh sách các đối tượng cần thêm
+      listCheckColorValidate: [ 
+        {conditionNameColor: false}
+      ],
     };
   },
   methods: {
+    checkNullItemObject(itemParam){
+      if(!itemParam){
+        return true;
+      } else
+      return false;
+    },
+
     /**
      * Chức năng: validate trước khi thêm
      */
@@ -233,7 +239,7 @@ export default {
 
         this.listUserRoles.forEach((element) => {
           if (!element.UserName) {
-            alert();
+            this.checkNullItemObject(element.UserName);
             isValidate = false;
           }
           if (!element.DepartmentID) {
