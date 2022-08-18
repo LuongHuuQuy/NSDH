@@ -213,7 +213,7 @@
         <MsDetail
         v-if="isShowUserDetail"
         @pagination="pagination"
-        :userSelected="userSelected"
+        :userSelected="userSelected" :key="userSelected.UserCode"
         @showUserDetailParameter="showUserDetailParameter"/>
 
         <!-- Nội dung phần popup xác nhận xóa người dùng -->

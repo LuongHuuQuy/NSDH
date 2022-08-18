@@ -73,7 +73,7 @@
                       display-expr="name"
                       v-model="user.PositionID"
                       placeholder="Chọn vị trí"
-                      class="ms-select-box width-sel-add"
+                      class="ms-select-box width-sel-add" :class="{'simple-color-validate': checkNullItemObject(user.PositionID)}"
                     />
                   </div>
                 </td>
@@ -88,7 +88,7 @@
                   </div>
                 </td>
                 <td class="add-td-role">
-                  <div class="input-add-user ms-tag-box">
+                  <div class="input-add-user ms-tag-box" :class="{'simple-color-validate': checkNullItemObject(user.ListRoleID)}">
                     <DxTagBox
                       :data-source="addUserRole"
                       value-expr="id"
@@ -111,7 +111,7 @@
                       display-expr="name"
                       v-model="user.Status"
                       placeholder="Chọn trạng thái"
-                      class="ms-select-box width-sel-add"
+                      class="ms-select-box width-sel-add" :class="{'simple-color-validate': checkNullItemObject(user.Status)}"
                     />
                   </div>
                 </td>
