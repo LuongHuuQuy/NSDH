@@ -137,6 +137,10 @@
     border-collapse: collapse;
 }
 
+.add-user-tbody td {
+    border-bottom: 1px solid #e7e8e9;
+}
+
 .add-user-thead tr {
     border-bottom: 1px solid #e7e8e9;
 }

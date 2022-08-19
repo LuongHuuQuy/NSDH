@@ -89,7 +89,7 @@
                   </div>
                 </td>
                 <td class="add-td-role">
-                  <div class="input-add-user ms-tag-box" :class="{'dx-dropdowneditor-field-clickable': checkNullItemObject(user.ListRoleID)}">
+                  <div class="input-add-user ms-tag-box" :class="{'children-color-validate': false}">
                     <DxTagBox
                       :data-source="addUserRole"
                       value-expr="id"
@@ -101,6 +101,7 @@
                       placeholder="Chọn vai trò"
                       :accept-custom-value="false"
                       :multiline="false"
+                      class="tag-box-add"
                     />
                   </div>
                 </td>
