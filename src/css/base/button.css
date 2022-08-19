@@ -125,6 +125,11 @@
     margin-right: 0px !important;
 }
 
+.enable-btn-save {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
 
 /* Nội dung Button xác nhận xóa User  */
 

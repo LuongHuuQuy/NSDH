@@ -64,9 +64,21 @@
     height: 36px;
 }
 
+.input-add-user:focus-within {
+    border: 1px solid #098ac4 !important;
+}
+
+.input-add-user:hover {
+    border: 1px solid #bcd8f1;
+}
+
 .ms-tag-box {
     width: 340px !important;
     padding: 0px !important;
+    border: none !important;
+}
+
+.ms-tag-box:focus-within {
     border: none !important;
 }
 

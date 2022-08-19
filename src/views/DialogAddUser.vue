@@ -46,6 +46,7 @@
                 <td class="add-td-username">
                   <div class="input-add-user" :class="{'simple-color-validate': checkNullItemObject(user.UserName)}">
                     <input
+                      ref="isFocusUserName"
                       v-model="user.UserName"
                       type="text"
                       class="input-content"
@@ -88,7 +89,7 @@
                   </div>
                 </td>
                 <td class="add-td-role">
-                  <div class="input-add-user ms-tag-box" :class="{'simple-color-validate': checkNullItemObject(user.ListRoleID)}">
+                  <div class="input-add-user ms-tag-box" :class="{'dx-dropdowneditor-field-clickable': checkNullItemObject(user.ListRoleID)}">
                     <DxTagBox
                       :data-source="addUserRole"
                       value-expr="id"
@@ -117,7 +118,7 @@
                 </td>
                 <td class="td-btn td-btn-add">
                   <div class="tbl-btn tbl-btn-add">
-                    <div class="tbl-btn-delete" @click="btnDeleteRow(index)">
+                    <div class="tbl-btn-delete" :class="{'enable-btn-delete': listUserRoles.length==1}" @click="btnDeleteRow(index)">
                       <i class="block-delete"></i>
                     </div>
                   </div>
@@ -218,40 +219,44 @@ export default {
       ],
       listUserRoles: [],    // Danh sách các đối tượng cần thêm
       isCheckChangeColor: 1,
+      regexEmail: /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/, // Kiểm tra điều kiện Email
     };
   },
   methods: {
+    /**
+     * Chức năng: Kiểm tra nếu có Validate thì bao đỏ viền nội dung
+     * CreatedBy: Lương Hữu Quý
+     * CreatedDate: 18/08/2022
+     * || (itemParam && !itemParam.match(this.regexEmail))
+     */
     checkNullItemObject(itemParam){
-      if(!itemParam && this.isCheckChangeColor==2){
+      if((!itemParam && this.isCheckChangeColor==2)){
         return true;
       } else
       return false;
+
     },
 
     /**
      * Chức năng: validate trước khi thêm
+     * CreatedBy: Lương Hữu Quý
+     * CreatedDate: 18/08/2022
      */
     userAddValidate() {
       try {
         let isValidate = true;
 
-        this.listUserRoles.forEach((element) => {
-          if (!element.UserName) {
-            this.checkNullItemObject(element.UserName);
+        if(this.checkNullItemObject()) {
             isValidate = false;
           }
-          if (!element.DepartmentID) {
-            isValidate = false;
-          }
-        });
 
-        // Kiểm tra xem có lỗi không
+        // // Kiểm tra xem có lỗi không
         if (!isValidate) {
           return false;
-        }
-        return true;
+        } 
+          return true;
       } catch (error) {
-        console.log(error, "Có lỗi khi kiểm tra dữ liệu !");
+        console.log(error, "Có lỗi khi kiểm tra dữ liệu !")
       }
     },
 
@@ -301,6 +306,7 @@ export default {
         const newUser = new UserRole();
         newUser.UserCode = newCode;
         me.listUserRoles.push(newUser);
+        me.$nextTick(() => me.$refs.isFocusUserName[me.listUserRoles.length - 1].focus());
       } catch (error) {
         console.log(error, "Lỗi khi thêm dòng mới !!!");
       }
@@ -334,13 +340,16 @@ export default {
       await axios
         .get("http://localhost:5224/api/v1/Users/NewUserCode")
         .then(function (res) {
-          if (typeof res.data == "string") {
-            const newUser = new UserRole();
-            newUser.UserCode = res.data;
-            me.listUserRoles.push(newUser);
-          } else {
-            console.log(res);
+          if (typeof res.data != "string") {
+            console.log(res, "Sai dữ liệu trả về !");
           }
+
+          const newUser = new UserRole();
+          newUser.UserCode = res.data;
+          me.listUserRoles.push(newUser);
+          
+          me.$nextTick(() => me.$refs.isFocusUserName[0].focus());
+
         })
         .catch(function (res) {
           console.log(res, "Lỗi trong quá trình gọi API lấy mã mới !");

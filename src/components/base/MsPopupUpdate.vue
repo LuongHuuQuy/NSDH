@@ -67,7 +67,7 @@
                 <button class="ms-button btn-user-exit" @click="iconClosePopupUpdate">
                     <span class="ms-button-text">Hủy</span>
                 </button>
-                <button class="ms-button btn-user-add custom-btn-add" @click="btnUpdateUserRole">
+                <button class="ms-button btn-user-add custom-btn-add" :class="{'enable-btn-save': checkEnableBtnSave}" @click="btnUpdateUserRole">
                     <span class="ms-button-text">Lưu</span>
                 </button>
             </div>
@@ -101,7 +101,8 @@ export default {
                 {User_RoleName: ""},
                 {Status: 0},
             ],
-            listupdateUserRole: []  // Danh sách gửi về api để thực hiện cập nhật
+            listupdateUserRole: [],  // Danh sách gửi về api để thực hiện cập nhật
+            checkEnableBtnSave: false,
         }
     },
     methods:{
@@ -137,19 +138,23 @@ export default {
                 me.userRole[i].User_RoleName = element.name;
 
                 if(element.check == me.checkUpdate[i].check){
+                    // Không thay đổi vai trò
                     me.userRole[i].Status = 0;
                     me.listupdateUserRole.push(me.userRole[i]);
                 } else
                 if(element.check == true && me.checkUpdate[i].check == false){
+                    // Thêm vai trò mới
                     me.userRole[i].Status = 1;
                     me.listupdateUserRole.push(me.userRole[i]);
                 } else
                 if(element.check == false && me.checkUpdate[i].check == true){
+                        // Loại bỏ vai trò
                         me.userRole[i].Status = 2;
                         me.listupdateUserRole.push(me.userRole[i]);
                     }
                 i++;
             });
+            
         },
         
         /**
@@ -215,6 +220,18 @@ export default {
             console.log(error,"Có lỗi xảy ra khi sửa User!")
         }
     },
-    updated(){}
+    async updated(){
+        var me = this;
+        var countItemEmptyRole = 0;
+        await me.updateUserRole.forEach(element => {
+            if(element.check == false)
+                countItemEmptyRole+=1;
+        });
+
+        if(countItemEmptyRole==4){
+            me.checkEnableBtnSave = true;
+        }else
+            me.checkEnableBtnSave = false;
+    }
 }
 </script>
